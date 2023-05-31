@@ -1,0 +1,37 @@
+﻿<Page x:Class="WPF_laba_16.Options"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WPF_laba_16"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Options">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.6*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0" Margin="5 0">
+            <Label x:Name="lbl" Content="Цвет главной формы" Foreground="Blue"/>
+
+            <RadioButton Content="Белый" Checked="color_checked"/>
+            <RadioButton Content="Красный" Checked="color_checked"/>
+            <RadioButton Content="Голубой" Checked="color_checked"/>
+            <RadioButton Content="Зеленый" Checked="color_checked"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" HorizontalAlignment="Center">
+            <Label FontSize="16" Content="Заголовок главного окна" x:Name="title"/>
+
+            <TextBox x:Name="box" MaxLength="60" Margin="5,5,5,5" Width="200"/>
+
+            <WrapPanel VerticalAlignment="Bottom" Margin="10 0" Orientation="Horizontal">
+                <Button Style="{StaticResource btnStyle}" Content="ОК" Click="OK"/>
+                <Button Style="{StaticResource btnStyle}" Content="Выход" Click="Exit"/>
+            </WrapPanel>
+        </StackPanel>
+    </Grid>
+</Page>
