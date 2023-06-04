@@ -31,10 +31,10 @@ namespace WPF_laba_16
 
             switch (pressed.Content.ToString())
             {
-                case "Белый": lbl.Foreground = Brushes.White; break;
-                case "Красный": lbl.Foreground = Brushes.Red; break;
-                case "Голубой": lbl.Foreground = Brushes.Blue; break;
-                case "Зеленый": lbl.Foreground = Brushes.Green; break;
+                case "Белый": lb.Foreground = Brushes.White; break;
+                case "Красный": lb.Foreground = Brushes.Crimson; break;
+                case "Голубой": lb.Foreground = Brushes.CadetBlue; break;
+                case "Зеленый": lb.Foreground = Brushes.LightGreen; break;
             }
         }
 

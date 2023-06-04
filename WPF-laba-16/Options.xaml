@@ -9,28 +9,32 @@
       Title="Options">
 
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="background.png"/>
+        </Grid.Background>
+        
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.6*"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
         <StackPanel Grid.Column="0" Margin="5 0">
-            <Label x:Name="lbl" Content="Цвет главной формы" Foreground="Blue"/>
+            <Label x:Name="lb" Content="Цвет главной формы" Foreground="Blue"/>
 
-            <RadioButton Content="Белый" Checked="color_checked"/>
-            <RadioButton Content="Красный" Checked="color_checked"/>
-            <RadioButton Content="Голубой" Checked="color_checked"/>
-            <RadioButton Content="Зеленый" Checked="color_checked"/>
+            <RadioButton Content="Белый" Checked="color_checked" Foreground="White"/>
+            <RadioButton Content="Красный" Checked="color_checked" Foreground="Crimson"/>
+            <RadioButton Content="Голубой" Checked="color_checked" Foreground="CadetBlue"/>
+            <RadioButton Content="Зеленый" Checked="color_checked" Foreground="LightGreen"/>
         </StackPanel>
 
         <StackPanel Grid.Column="1" HorizontalAlignment="Center">
-            <Label FontSize="16" Content="Заголовок главного окна" x:Name="title"/>
+            <Label FontSize="16" Content="Заголовок главного окна" x:Name="title" Foreground="WhiteSmoke" Margin="5,5,5,0"/>
 
-            <TextBox x:Name="box" MaxLength="60" Margin="5,5,5,5" Width="200"/>
+            <TextBox x:Name="box" Margin="0,5,5,5" Width="200"/>
 
-            <WrapPanel VerticalAlignment="Bottom" Margin="10 0" Orientation="Horizontal">
-                <Button Style="{StaticResource btnStyle}" Content="ОК" Click="OK"/>
-                <Button Style="{StaticResource btnStyle}" Content="Выход" Click="Exit"/>
+            <WrapPanel VerticalAlignment="Bottom" Margin="5,5,5,5" Orientation="Horizontal">
+                <Button Style="{StaticResource buttonStyle}" Content="ОК" Click="OK"/>
+                <Button Style="{StaticResource buttonStyle}" Content="Выход" Click="Exit"/>
             </WrapPanel>
         </StackPanel>
     </Grid>

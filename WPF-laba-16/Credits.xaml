@@ -9,9 +9,13 @@
       Title="Credits">
 
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="background.png"/>
+        </Grid.Background>
+        
         <StackPanel VerticalAlignment="Center">
-            <Label Content="Данная программа демонстрирует работу с несколькими окнами" Margin="5,5,5,5" HorizontalAlignment="Center"/>
-            <Button Content="Закрыть" Style="{StaticResource btnStyle}" Margin="5,10,5,5" Click="Exit"/>
+            <Label Content="Данная программа демонстрирует работу с несколькими окнами" Margin="5,5,5,5" HorizontalAlignment="Center" Foreground="WhiteSmoke"/>
+            <Button Content="Закрыть" Style="{StaticResource buttonStyle}" Margin="5,10,5,5" Click="Exit"/>
         </StackPanel>
     </Grid>
 </Page>
